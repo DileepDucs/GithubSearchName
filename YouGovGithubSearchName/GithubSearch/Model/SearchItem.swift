@@ -15,6 +15,8 @@ class SearchItem: Object, Decodable {
     @objc dynamic var language: String? = nil
     @objc dynamic var created_at: String? = nil
     @objc dynamic var owner: Owner? = nil
+    @objc dynamic var likeDislike: String? = nil
+    
     
     
     override class func primaryKey() -> String? {
@@ -28,6 +30,7 @@ class SearchItem: Object, Decodable {
         case language
         case created_at
         case owner
+        case likeDislike
     }
     
     required convenience init(from decoder: Decoder) throws {
@@ -39,6 +42,7 @@ class SearchItem: Object, Decodable {
         language = try? container.decode(String.self, forKey: .language)
         created_at = try? container.decode(String.self, forKey: .created_at)
         owner = try? container.decode(Owner.self, forKey: .owner)
+        likeDislike = try? container.decode(String.self, forKey: .likeDislike)
     }
     
 }
