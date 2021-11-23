@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20C83F8FFF3EEF5E21CDAD89 /* Pods_YouGovGithubSearchName.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C402D9C2B3E15672FBCD006F /* Pods_YouGovGithubSearchName.framework */; };
 		F042FED9274CC7A600742B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FED8274CC7A600742B39 /* AppDelegate.swift */; };
 		F042FEDB274CC7A600742B39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FEDA274CC7A600742B39 /* SceneDelegate.swift */; };
 		F042FEE2274CC7A800742B39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F042FEE1274CC7A800742B39 /* Assets.xcassets */; };
@@ -30,9 +31,13 @@
 		F042FF16274CC99600742B39 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF14274CC99600742B39 /* SearchView.swift */; };
 		F042FF19274CCA5500742B39 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF18274CCA5500742B39 /* Utility.swift */; };
 		F042FF1C274CCC3F00742B39 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F042FF1B274CCC3F00742B39 /* Podfile */; };
+		F042FF1E274CCDE000742B39 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF1D274CCDDF00742B39 /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A030F337CC5FD199865C01DD /* Pods-YouGovGithubSearchName.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouGovGithubSearchName.release.xcconfig"; path = "Target Support Files/Pods-YouGovGithubSearchName/Pods-YouGovGithubSearchName.release.xcconfig"; sourceTree = "<group>"; };
+		C402D9C2B3E15672FBCD006F /* Pods_YouGovGithubSearchName.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouGovGithubSearchName.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E38373C760EAB2B20B17DA1E /* Pods-YouGovGithubSearchName.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouGovGithubSearchName.debug.xcconfig"; path = "Target Support Files/Pods-YouGovGithubSearchName/Pods-YouGovGithubSearchName.debug.xcconfig"; sourceTree = "<group>"; };
 		F042FED5274CC7A600742B39 /* YouGovGithubSearchName.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouGovGithubSearchName.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F042FED8274CC7A600742B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F042FEDA274CC7A600742B39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 		F042FF14274CC99600742B39 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		F042FF18274CCA5500742B39 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		F042FF1B274CCC3F00742B39 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		F042FF1D274CCDDF00742B39 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +71,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C83F8FFF3EEF5E21CDAD89 /* Pods_YouGovGithubSearchName.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E1F428DCCA790F0FF0AB733 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E38373C760EAB2B20B17DA1E /* Pods-YouGovGithubSearchName.debug.xcconfig */,
+				A030F337CC5FD199865C01DD /* Pods-YouGovGithubSearchName.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CF1C36CCC7355C4D618B8ED0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C402D9C2B3E15672FBCD006F /* Pods_YouGovGithubSearchName.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F042FECC274CC7A600742B39 = {
 			isa = PBXGroup;
 			children = (
 				F042FED7274CC7A600742B39 /* YouGovGithubSearchName */,
 				F042FED6274CC7A600742B39 /* Products */,
+				2E1F428DCCA790F0FF0AB733 /* Pods */,
+				CF1C36CCC7355C4D618B8ED0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,6 +217,7 @@
 		F042FF17274CCA2C00742B39 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F042FF1D274CCDDF00742B39 /* ActivityIndicator.swift */,
 				F042FEDA274CC7A600742B39 /* SceneDelegate.swift */,
 				F042FED8274CC7A600742B39 /* AppDelegate.swift */,
 				F042FF18274CCA5500742B39 /* Utility.swift */,
@@ -213,9 +240,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F042FEE9274CC7A800742B39 /* Build configuration list for PBXNativeTarget "YouGovGithubSearchName" */;
 			buildPhases = (
+				1789CD2D7CCC88271A7AC271 /* [CP] Check Pods Manifest.lock */,
 				F042FED1274CC7A600742B39 /* Sources */,
 				F042FED2274CC7A600742B39 /* Frameworks */,
 				F042FED3274CC7A600742B39 /* Resources */,
+				AD309EB8759B9BBFCCB0B6E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -271,6 +300,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1789CD2D7CCC88271A7AC271 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YouGovGithubSearchName-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD309EB8759B9BBFCCB0B6E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YouGovGithubSearchName/Pods-YouGovGithubSearchName-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YouGovGithubSearchName/Pods-YouGovGithubSearchName-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YouGovGithubSearchName/Pods-YouGovGithubSearchName-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F042FED1274CC7A600742B39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -280,6 +351,7 @@
 				F042FF16274CC99600742B39 /* SearchView.swift in Sources */,
 				F042FEF9274CC8B900742B39 /* NetworkManager.swift in Sources */,
 				F042FF11274CC91500742B39 /* GithubSearchRequest.swift in Sources */,
+				F042FF1E274CCDE000742B39 /* ActivityIndicator.swift in Sources */,
 				F042FF0C274CC91500742B39 /* SearchItem.swift in Sources */,
 				F042FEFC274CC8B900742B39 /* EndPointType.swift in Sources */,
 				F042FF15274CC99600742B39 /* SearchDetailViewController.swift in Sources */,
@@ -431,6 +503,7 @@
 		};
 		F042FEEA274CC7A800742B39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E38373C760EAB2B20B17DA1E /* Pods-YouGovGithubSearchName.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -449,6 +522,7 @@
 		};
 		F042FEEB274CC7A800742B39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A030F337CC5FD199865C01DD /* Pods-YouGovGithubSearchName.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
