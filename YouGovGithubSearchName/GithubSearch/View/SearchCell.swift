@@ -13,7 +13,7 @@ class SearchCell: UITableViewCell {
     fileprivate let avatarImageView = UIImageView()
     fileprivate let nameLabel = UILabel()
     fileprivate let languageLabel = UILabel()
-    fileprivate let stargazersCount = UILabel()
+    fileprivate let starsCountLabel = UILabel()
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -30,7 +30,7 @@ class SearchCell: UITableViewCell {
             avatarImageView.sd_setImage(with: URL(string: search?.owner?.avatar_url ?? ""), placeholderImage: UIImage(named: ""))
             nameLabel.text = search?.name
             languageLabel.text = "• \(search?.language ?? "")"
-            stargazersCount.text = "\(search?.stargazers_count ?? 0)"
+            starsCountLabel.text = "\(search?.stargazers_count ?? 0)"
         }
     }
     
@@ -38,13 +38,13 @@ class SearchCell: UITableViewCell {
         avatarImageView.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         languageLabel.translatesAutoresizingMaskIntoConstraints = false
-        stargazersCount.translatesAutoresizingMaskIntoConstraints = false
+        starsCountLabel.translatesAutoresizingMaskIntoConstraints = false
         
         // add views
         contentView.addSubview(avatarImageView)
         contentView.addSubview(nameLabel)
         contentView.addSubview(languageLabel)
-        contentView.addSubview(stargazersCount)
+        contentView.addSubview(starsCountLabel)
         
         // setup views properties
         avatarImageView.contentMode = .scaleAspectFit
@@ -53,7 +53,7 @@ class SearchCell: UITableViewCell {
         nameLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         languageLabel.textColor = .darkGray
         languageLabel.numberOfLines = 2
-        stargazersCount.textColor = .orange
+        starsCountLabel.textColor = .orange
         
         // setup views constraints
         let marginGuide = contentView.layoutMarginsGuide
@@ -72,9 +72,9 @@ class SearchCell: UITableViewCell {
             languageLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 15),
             languageLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor),
             // stargazers Count
-            stargazersCount.topAnchor.constraint(greaterThanOrEqualTo: languageLabel.bottomAnchor, constant: 8),
-            stargazersCount.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor),
-            stargazersCount.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor)
+            starsCountLabel.topAnchor.constraint(greaterThanOrEqualTo: languageLabel.bottomAnchor, constant: 8),
+            starsCountLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor),
+            starsCountLabel.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor)
         ])
     }
     

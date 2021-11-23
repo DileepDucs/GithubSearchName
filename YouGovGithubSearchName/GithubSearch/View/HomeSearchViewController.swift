@@ -22,7 +22,11 @@ class HomeSearchViewController: UITableViewController {
         viewModel.delegate = self
         tableView.register(SearchCell.self, forCellReuseIdentifier: "cell")
         setupNavigationBar()
-        githubSearchItemsWith(name: "Apple")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = false
     }
     
     private func setupNavigationBar() {
