@@ -6,5 +6,7 @@ target 'YouGovGithubSearchName' do
   use_frameworks!
 
   # Pods for YouGovGithubSearchName
-
+  pod 'RealmSwift'
+  pod 'SDWebImage'
+  
 end
