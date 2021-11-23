@@ -28,6 +28,8 @@
 		F042FF0F274CC91500742B39 /* HomeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF07274CC91500742B39 /* HomeSearchViewController.swift */; };
 		F042FF10274CC91500742B39 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF08274CC91500742B39 /* SearchCell.swift */; };
 		F042FF11274CC91500742B39 /* GithubSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF0A274CC91500742B39 /* GithubSearchRequest.swift */; };
+		F042FF15274CC99600742B39 /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF13274CC99600742B39 /* SearchDetailViewController.swift */; };
+		F042FF16274CC99600742B39 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF14274CC99600742B39 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		F042FF07274CC91500742B39 /* HomeSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchViewController.swift; sourceTree = "<group>"; };
 		F042FF08274CC91500742B39 /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		F042FF0A274CC91500742B39 /* GithubSearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchRequest.swift; sourceTree = "<group>"; };
+		F042FF13274CC99600742B39 /* SearchDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
+		F042FF14274CC99600742B39 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		F042FED7274CC7A600742B39 /* YouGovGithubSearchName */ = {
 			isa = PBXGroup;
 			children = (
+				F042FF12274CC99600742B39 /* GithubSearchDetail */,
 				F042FEFF274CC91500742B39 /* GithubSearch */,
 				F042FEEC274CC8B900742B39 /* Network */,
 				F042FED8274CC7A600742B39 /* AppDelegate.swift */,
@@ -176,6 +181,15 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		F042FF12274CC99600742B39 /* GithubSearchDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F042FF13274CC99600742B39 /* SearchDetailViewController.swift */,
+				F042FF14274CC99600742B39 /* SearchView.swift */,
+			);
+			path = GithubSearchDetail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,11 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F042FF16274CC99600742B39 /* SearchView.swift in Sources */,
 				F042FEF9274CC8B900742B39 /* NetworkManager.swift in Sources */,
 				F042FEDD274CC7A600742B39 /* ViewController.swift in Sources */,
 				F042FF11274CC91500742B39 /* GithubSearchRequest.swift in Sources */,
 				F042FF0C274CC91500742B39 /* SearchItem.swift in Sources */,
 				F042FEFC274CC8B900742B39 /* EndPointType.swift in Sources */,
+				F042FF15274CC99600742B39 /* SearchDetailViewController.swift in Sources */,
 				F042FED9274CC7A600742B39 /* AppDelegate.swift in Sources */,
 				F042FEF7274CC8B900742B39 /* NetworkConfig.swift in Sources */,
 				F042FEF8274CC8B900742B39 /* APIClient.swift in Sources */,
