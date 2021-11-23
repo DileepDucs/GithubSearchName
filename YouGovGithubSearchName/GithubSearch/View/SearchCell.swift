@@ -7,67 +7,75 @@
 
 import UIKit
 
-protocol SearchCellDelegate {
-    func increaseNumber(cell: SearchCell,number : Int)
-    func decreaseNumber(cell: SearchCell,number : Int)
-}
 
 class SearchCell: UITableViewCell {
-    let padding: CGFloat = 5
-    var background: UIView!
-    var nameLabel: UILabel!
-    var languageLabel: UILabel!
-    var stargazersCount: UILabel!
-
-    var search: SearchItem? {
-        didSet {
-            nameLabel.text = search?.name
-            languageLabel.text = search?.language
-            stargazersCount.text = String(search?.stargazers_count ?? 0)
-            setNeedsLayout()
-        }
-    }
-
+    
+    fileprivate let avatarImageView = UIImageView()
+    fileprivate let nameLabel = UILabel()
+    fileprivate let languageLabel = UILabel()
+    fileprivate let stargazersCount = UILabel()
+    
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        backgroundColor = UIColor.clear
-        selectionStyle = .none
-            
-        background = UIView(frame: CGRect.zero)
-        background.backgroundColor = .red
-        background.alpha = 0.6
-        contentView.addSubview(background)
-
-        nameLabel = UILabel(frame: CGRect.zero)
-        nameLabel.textAlignment = .left
-        nameLabel.textColor = .black
-        contentView.addSubview(nameLabel)
-
-        languageLabel = UILabel(frame: CGRect.zero)
-        languageLabel.textAlignment = .center
-        languageLabel.textColor = .black
-        contentView.addSubview(languageLabel)
-
-        stargazersCount = UILabel(frame: CGRect.zero)
-        stargazersCount.textAlignment = .center
-        stargazersCount.textColor = .black
-        contentView.addSubview(stargazersCount)
+        setupViews()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        background.frame = CGRect(x: 0, y: padding, width: frame.width, height: frame.height - 2 * padding)
-        nameLabel.frame = CGRect(x: padding, y: (frame.height - 25)/2, width: 40, height: 25)
-        languageLabel.frame = CGRect(x: frame.width - 100, y: padding, width: 100, height: frame.height - 2 * padding)
-        stargazersCount.frame = CGRect(x: 50 + 10, y: 0, width: frame.width - stargazersCount.frame.width - 40 + 10, height: frame.height)
-    }
-    
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    override func prepareForReuse() {
-        super.prepareForReuse()
+    
+    var search: SearchItem? {
+        didSet {
+            avatarImageView.sd_setImage(with: URL(string: search?.owner?.avatar_url ?? ""), placeholderImage: UIImage(named: ""))
+            nameLabel.text = search?.name
+            languageLabel.text = "• \(search?.language ?? "")"
+            stargazersCount.text = "\(search?.stargazers_count ?? 0)"
+        }
     }
-
+    
+    func setupViews() {
+        avatarImageView.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        languageLabel.translatesAutoresizingMaskIntoConstraints = false
+        stargazersCount.translatesAutoresizingMaskIntoConstraints = false
+        
+        // add views
+        contentView.addSubview(avatarImageView)
+        contentView.addSubview(nameLabel)
+        contentView.addSubview(languageLabel)
+        contentView.addSubview(stargazersCount)
+        
+        // setup views properties
+        avatarImageView.contentMode = .scaleAspectFit
+        nameLabel.font = .boldSystemFont(ofSize: 17.0)
+        nameLabel.numberOfLines = 2
+        nameLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        languageLabel.textColor = .darkGray
+        languageLabel.numberOfLines = 2
+        stargazersCount.textColor = .orange
+        
+        // setup views constraints
+        let marginGuide = contentView.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            // avatar cover
+            avatarImageView.widthAnchor.constraint(equalToConstant: 60),
+            avatarImageView.heightAnchor.constraint(equalToConstant: 80),
+            avatarImageView.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor),
+            avatarImageView.topAnchor.constraint(equalTo: marginGuide.topAnchor),
+            avatarImageView.bottomAnchor.constraint(lessThanOrEqualTo: marginGuide.bottomAnchor),
+            // name
+            nameLabel.topAnchor.constraint(equalTo: marginGuide.topAnchor, constant: 5),
+            nameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 15),
+            // language
+            languageLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10),
+            languageLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 15),
+            languageLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor),
+            // stargazers Count
+            stargazersCount.topAnchor.constraint(greaterThanOrEqualTo: languageLabel.bottomAnchor, constant: 8),
+            stargazersCount.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor),
+            stargazersCount.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor)
+        ])
+    }
+    
 }
