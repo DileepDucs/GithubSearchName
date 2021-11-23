@@ -26,10 +26,10 @@ class SearchView: UIView {
         imageView.contentMode = .scaleAspectFit
         addSubview(imageView)
         
-        likeButton.setImage(#imageLiteral(resourceName: "like"), for: .normal)
+        likeButton.setImage(likeButton, for: .normal)
         addSubview(likeButton)
         
-        dislikeButton.setImage(#imageLiteral(resourceName: "dontlike"), for: .normal)
+        dislikeButton.setImage(lik, for: .normal)
         addSubview(dislikeButton)
         
         buttons.addArrangedSubview(likeButton)
