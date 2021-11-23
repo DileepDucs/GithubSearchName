@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F042FED9274CC7A600742B39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FED8274CC7A600742B39 /* AppDelegate.swift */; };
 		F042FEDB274CC7A600742B39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FEDA274CC7A600742B39 /* SceneDelegate.swift */; };
-		F042FEDD274CC7A600742B39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FEDC274CC7A600742B39 /* ViewController.swift */; };
 		F042FEE0274CC7A600742B39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F042FEDE274CC7A600742B39 /* Main.storyboard */; };
 		F042FEE2274CC7A800742B39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F042FEE1274CC7A800742B39 /* Assets.xcassets */; };
 		F042FEE5274CC7A800742B39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F042FEE3274CC7A800742B39 /* LaunchScreen.storyboard */; };
@@ -30,13 +29,13 @@
 		F042FF11274CC91500742B39 /* GithubSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF0A274CC91500742B39 /* GithubSearchRequest.swift */; };
 		F042FF15274CC99600742B39 /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF13274CC99600742B39 /* SearchDetailViewController.swift */; };
 		F042FF16274CC99600742B39 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF14274CC99600742B39 /* SearchView.swift */; };
+		F042FF19274CCA5500742B39 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF18274CCA5500742B39 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F042FED5274CC7A600742B39 /* YouGovGithubSearchName.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouGovGithubSearchName.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F042FED8274CC7A600742B39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F042FEDA274CC7A600742B39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F042FEDC274CC7A600742B39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F042FEDF274CC7A600742B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F042FEE1274CC7A800742B39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F042FEE4274CC7A800742B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		F042FF0A274CC91500742B39 /* GithubSearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchRequest.swift; sourceTree = "<group>"; };
 		F042FF13274CC99600742B39 /* SearchDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
 		F042FF14274CC99600742B39 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		F042FF18274CCA5500742B39 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,14 +90,12 @@
 		F042FED7274CC7A600742B39 /* YouGovGithubSearchName */ = {
 			isa = PBXGroup;
 			children = (
+				F042FF1A274CCA6600742B39 /* Resources */,
+				F042FF17274CCA2C00742B39 /* Common */,
 				F042FF12274CC99600742B39 /* GithubSearchDetail */,
 				F042FEFF274CC91500742B39 /* GithubSearch */,
 				F042FEEC274CC8B900742B39 /* Network */,
-				F042FED8274CC7A600742B39 /* AppDelegate.swift */,
-				F042FEDA274CC7A600742B39 /* SceneDelegate.swift */,
-				F042FEDC274CC7A600742B39 /* ViewController.swift */,
 				F042FEDE274CC7A600742B39 /* Main.storyboard */,
-				F042FEE1274CC7A800742B39 /* Assets.xcassets */,
 				F042FEE3274CC7A800742B39 /* LaunchScreen.storyboard */,
 				F042FEE6274CC7A800742B39 /* Info.plist */,
 			);
@@ -190,6 +188,24 @@
 			path = GithubSearchDetail;
 			sourceTree = "<group>";
 		};
+		F042FF17274CCA2C00742B39 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F042FEDA274CC7A600742B39 /* SceneDelegate.swift */,
+				F042FED8274CC7A600742B39 /* AppDelegate.swift */,
+				F042FF18274CCA5500742B39 /* Utility.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F042FF1A274CCA6600742B39 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F042FEE1274CC7A800742B39 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,9 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F042FF19274CCA5500742B39 /* Utility.swift in Sources */,
 				F042FF16274CC99600742B39 /* SearchView.swift in Sources */,
 				F042FEF9274CC8B900742B39 /* NetworkManager.swift in Sources */,
-				F042FEDD274CC7A600742B39 /* ViewController.swift in Sources */,
 				F042FF11274CC91500742B39 /* GithubSearchRequest.swift in Sources */,
 				F042FF0C274CC91500742B39 /* SearchItem.swift in Sources */,
 				F042FEFC274CC8B900742B39 /* EndPointType.swift in Sources */,
