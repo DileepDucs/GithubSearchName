@@ -14,6 +14,7 @@ class SearchCell: UITableViewCell {
     fileprivate let nameLabel = UILabel()
     fileprivate let languageLabel = UILabel()
     fileprivate let starsCountLabel = UILabel()
+    fileprivate let likeDisLikeImageView = UIImageView()
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -39,12 +40,15 @@ class SearchCell: UITableViewCell {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         languageLabel.translatesAutoresizingMaskIntoConstraints = false
         starsCountLabel.translatesAutoresizingMaskIntoConstraints = false
+        likeDisLikeImageView.translatesAutoresizingMaskIntoConstraints = false
         
         // add views
         contentView.addSubview(avatarImageView)
         contentView.addSubview(nameLabel)
         contentView.addSubview(languageLabel)
         contentView.addSubview(starsCountLabel)
+        contentView.addSubview(likeDisLikeImageView)
+        
         
         // setup views properties
         avatarImageView.contentMode = .scaleAspectFit
@@ -54,6 +58,7 @@ class SearchCell: UITableViewCell {
         languageLabel.textColor = .darkGray
         languageLabel.numberOfLines = 2
         starsCountLabel.textColor = .orange
+        likeDisLikeImageView.image = UIImage(#imageLiteral(resourceName: "like"))
         
         // setup views constraints
         let marginGuide = contentView.layoutMarginsGuide
@@ -71,6 +76,11 @@ class SearchCell: UITableViewCell {
             languageLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10),
             languageLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 15),
             languageLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor),
+            //  like dislike Image View
+            likeDisLikeImageView.widthAnchor.constraint(equalToConstant: 30),
+            likeDisLikeImageView.heightAnchor.constraint(equalToConstant: 30),
+            likeDisLikeImageView.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 15),
+            likeDisLikeImageView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 28),
             // stargazers Count
             starsCountLabel.topAnchor.constraint(greaterThanOrEqualTo: languageLabel.bottomAnchor, constant: 8),
             starsCountLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor),
