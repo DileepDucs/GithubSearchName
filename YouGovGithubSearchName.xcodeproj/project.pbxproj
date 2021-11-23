@@ -29,6 +29,7 @@
 		F042FF15274CC99600742B39 /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF13274CC99600742B39 /* SearchDetailViewController.swift */; };
 		F042FF16274CC99600742B39 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF14274CC99600742B39 /* SearchView.swift */; };
 		F042FF19274CCA5500742B39 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF18274CCA5500742B39 /* Utility.swift */; };
+		F042FF1C274CCC3F00742B39 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F042FF1B274CCC3F00742B39 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		F042FF13274CC99600742B39 /* SearchDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
 		F042FF14274CC99600742B39 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		F042FF18274CCA5500742B39 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		F042FF1B274CCC3F00742B39 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				F042FEEC274CC8B900742B39 /* Network */,
 				F042FEE3274CC7A800742B39 /* LaunchScreen.storyboard */,
 				F042FEE6274CC7A800742B39 /* Info.plist */,
+				F042FF1B274CCC3F00742B39 /* Podfile */,
 			);
 			path = YouGovGithubSearchName;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F042FF1C274CCC3F00742B39 /* Podfile in Resources */,
 				F042FEE5274CC7A800742B39 /* LaunchScreen.storyboard in Resources */,
 				F042FEE2274CC7A800742B39 /* Assets.xcassets in Resources */,
 			);
