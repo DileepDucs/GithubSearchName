@@ -13,6 +13,14 @@
 		F042FEE0274CC7A600742B39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F042FEDE274CC7A600742B39 /* Main.storyboard */; };
 		F042FEE2274CC7A800742B39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F042FEE1274CC7A800742B39 /* Assets.xcassets */; };
 		F042FEE5274CC7A800742B39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F042FEE3274CC7A800742B39 /* LaunchScreen.storyboard */; };
+		F042FEF7274CC8B900742B39 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FEEE274CC8B900742B39 /* NetworkConfig.swift */; };
+		F042FEF8274CC8B900742B39 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FEEF274CC8B900742B39 /* APIClient.swift */; };
+		F042FEF9274CC8B900742B39 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FEF0274CC8B900742B39 /* NetworkManager.swift */; };
+		F042FEFA274CC8B900742B39 /* APIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FEF2274CC8B900742B39 /* APIClientProtocol.swift */; };
+		F042FEFB274CC8B900742B39 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FEF3274CC8B900742B39 /* NetworkManagerProtocol.swift */; };
+		F042FEFC274CC8B900742B39 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FEF4274CC8B900742B39 /* EndPointType.swift */; };
+		F042FEFD274CC8B900742B39 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FEF5274CC8B900742B39 /* NetworkConstant.swift */; };
+		F042FEFE274CC8B900742B39 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FEF6274CC8B900742B39 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		F042FEE1274CC7A800742B39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F042FEE4274CC7A800742B39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F042FEE6274CC7A800742B39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F042FEEE274CC8B900742B39 /* NetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		F042FEEF274CC8B900742B39 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		F042FEF0274CC8B900742B39 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F042FEF2274CC8B900742B39 /* APIClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientProtocol.swift; sourceTree = "<group>"; };
+		F042FEF3274CC8B900742B39 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		F042FEF4274CC8B900742B39 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		F042FEF5274CC8B900742B39 /* NetworkConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
+		F042FEF6274CC8B900742B39 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 		F042FED7274CC7A600742B39 /* YouGovGithubSearchName */ = {
 			isa = PBXGroup;
 			children = (
+				F042FEEC274CC8B900742B39 /* Network */,
 				F042FED8274CC7A600742B39 /* AppDelegate.swift */,
 				F042FEDA274CC7A600742B39 /* SceneDelegate.swift */,
 				F042FEDC274CC7A600742B39 /* ViewController.swift */,
@@ -65,6 +82,37 @@
 				F042FEE6274CC7A800742B39 /* Info.plist */,
 			);
 			path = YouGovGithubSearchName;
+			sourceTree = "<group>";
+		};
+		F042FEEC274CC8B900742B39 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F042FEED274CC8B900742B39 /* Config */,
+				F042FEEF274CC8B900742B39 /* APIClient.swift */,
+				F042FEF0274CC8B900742B39 /* NetworkManager.swift */,
+				F042FEF1274CC8B900742B39 /* Protocol */,
+				F042FEF5274CC8B900742B39 /* NetworkConstant.swift */,
+				F042FEF6274CC8B900742B39 /* NetworkError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F042FEED274CC8B900742B39 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F042FEEE274CC8B900742B39 /* NetworkConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F042FEF1274CC8B900742B39 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F042FEF2274CC8B900742B39 /* APIClientProtocol.swift */,
+				F042FEF3274CC8B900742B39 /* NetworkManagerProtocol.swift */,
+				F042FEF4274CC8B900742B39 /* EndPointType.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +185,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F042FEF9274CC8B900742B39 /* NetworkManager.swift in Sources */,
 				F042FEDD274CC7A600742B39 /* ViewController.swift in Sources */,
+				F042FEFC274CC8B900742B39 /* EndPointType.swift in Sources */,
 				F042FED9274CC7A600742B39 /* AppDelegate.swift in Sources */,
+				F042FEF7274CC8B900742B39 /* NetworkConfig.swift in Sources */,
+				F042FEF8274CC8B900742B39 /* APIClient.swift in Sources */,
+				F042FEFA274CC8B900742B39 /* APIClientProtocol.swift in Sources */,
+				F042FEFB274CC8B900742B39 /* NetworkManagerProtocol.swift in Sources */,
+				F042FEFD274CC8B900742B39 /* NetworkConstant.swift in Sources */,
+				F042FEFE274CC8B900742B39 /* NetworkError.swift in Sources */,
 				F042FEDB274CC7A600742B39 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
