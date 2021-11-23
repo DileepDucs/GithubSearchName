@@ -21,6 +21,13 @@
 		F042FEFC274CC8B900742B39 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FEF4274CC8B900742B39 /* EndPointType.swift */; };
 		F042FEFD274CC8B900742B39 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FEF5274CC8B900742B39 /* NetworkConstant.swift */; };
 		F042FEFE274CC8B900742B39 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FEF6274CC8B900742B39 /* NetworkError.swift */; };
+		F042FF0B274CC91500742B39 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF01274CC91500742B39 /* SearchViewModel.swift */; };
+		F042FF0C274CC91500742B39 /* SearchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF03274CC91500742B39 /* SearchItem.swift */; };
+		F042FF0D274CC91500742B39 /* GithubSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF04274CC91500742B39 /* GithubSearch.swift */; };
+		F042FF0E274CC91500742B39 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF05274CC91500742B39 /* Owner.swift */; };
+		F042FF0F274CC91500742B39 /* HomeSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF07274CC91500742B39 /* HomeSearchViewController.swift */; };
+		F042FF10274CC91500742B39 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF08274CC91500742B39 /* SearchCell.swift */; };
+		F042FF11274CC91500742B39 /* GithubSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF0A274CC91500742B39 /* GithubSearchRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +47,13 @@
 		F042FEF4274CC8B900742B39 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		F042FEF5274CC8B900742B39 /* NetworkConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		F042FEF6274CC8B900742B39 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		F042FF01274CC91500742B39 /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		F042FF03274CC91500742B39 /* SearchItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItem.swift; sourceTree = "<group>"; };
+		F042FF04274CC91500742B39 /* GithubSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearch.swift; sourceTree = "<group>"; };
+		F042FF05274CC91500742B39 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		F042FF07274CC91500742B39 /* HomeSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchViewController.swift; sourceTree = "<group>"; };
+		F042FF08274CC91500742B39 /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		F042FF0A274CC91500742B39 /* GithubSearchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubSearchRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +86,7 @@
 		F042FED7274CC7A600742B39 /* YouGovGithubSearchName */ = {
 			isa = PBXGroup;
 			children = (
+				F042FEFF274CC91500742B39 /* GithubSearch */,
 				F042FEEC274CC8B900742B39 /* Network */,
 				F042FED8274CC7A600742B39 /* AppDelegate.swift */,
 				F042FEDA274CC7A600742B39 /* SceneDelegate.swift */,
@@ -113,6 +128,52 @@
 				F042FEF4274CC8B900742B39 /* EndPointType.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F042FEFF274CC91500742B39 /* GithubSearch */ = {
+			isa = PBXGroup;
+			children = (
+				F042FF00274CC91500742B39 /* ViewModel */,
+				F042FF02274CC91500742B39 /* Model */,
+				F042FF06274CC91500742B39 /* View */,
+				F042FF09274CC91500742B39 /* Request */,
+			);
+			path = GithubSearch;
+			sourceTree = "<group>";
+		};
+		F042FF00274CC91500742B39 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F042FF01274CC91500742B39 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F042FF02274CC91500742B39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F042FF03274CC91500742B39 /* SearchItem.swift */,
+				F042FF04274CC91500742B39 /* GithubSearch.swift */,
+				F042FF05274CC91500742B39 /* Owner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F042FF06274CC91500742B39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F042FF07274CC91500742B39 /* HomeSearchViewController.swift */,
+				F042FF08274CC91500742B39 /* SearchCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F042FF09274CC91500742B39 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				F042FF0A274CC91500742B39 /* GithubSearchRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,14 +248,21 @@
 			files = (
 				F042FEF9274CC8B900742B39 /* NetworkManager.swift in Sources */,
 				F042FEDD274CC7A600742B39 /* ViewController.swift in Sources */,
+				F042FF11274CC91500742B39 /* GithubSearchRequest.swift in Sources */,
+				F042FF0C274CC91500742B39 /* SearchItem.swift in Sources */,
 				F042FEFC274CC8B900742B39 /* EndPointType.swift in Sources */,
 				F042FED9274CC7A600742B39 /* AppDelegate.swift in Sources */,
 				F042FEF7274CC8B900742B39 /* NetworkConfig.swift in Sources */,
 				F042FEF8274CC8B900742B39 /* APIClient.swift in Sources */,
+				F042FF0F274CC91500742B39 /* HomeSearchViewController.swift in Sources */,
+				F042FF0B274CC91500742B39 /* SearchViewModel.swift in Sources */,
 				F042FEFA274CC8B900742B39 /* APIClientProtocol.swift in Sources */,
 				F042FEFB274CC8B900742B39 /* NetworkManagerProtocol.swift in Sources */,
 				F042FEFD274CC8B900742B39 /* NetworkConstant.swift in Sources */,
 				F042FEFE274CC8B900742B39 /* NetworkError.swift in Sources */,
+				F042FF0D274CC91500742B39 /* GithubSearch.swift in Sources */,
+				F042FF0E274CC91500742B39 /* Owner.swift in Sources */,
+				F042FF10274CC91500742B39 /* SearchCell.swift in Sources */,
 				F042FEDB274CC7A600742B39 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
