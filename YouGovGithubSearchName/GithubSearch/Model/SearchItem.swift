@@ -18,11 +18,10 @@ class SearchItem: Object, Decodable {
     @objc dynamic var likeDislike: String? = nil
     
     
-    
-    override class func primaryKey() -> String? {
+    override static func primaryKey() -> String? {
         return "id"
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case name

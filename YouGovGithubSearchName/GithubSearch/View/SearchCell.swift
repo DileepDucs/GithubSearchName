@@ -32,6 +32,11 @@ class SearchCell: UITableViewCell {
             nameLabel.text = search?.name
             languageLabel.text = "• \(search?.language ?? "")"
             starsCountLabel.text = "\(search?.stargazers_count ?? 0)"
+            if let item = RealmManager.shared.getSavedItemFromLocal(id: search?.id ?? 0) {
+                likeDisLikeImageView.image = UIImage(named: item.likeDislike ?? "")
+            } else {
+                likeDisLikeImageView.image = nil
+            }
         }
     }
     
@@ -58,7 +63,6 @@ class SearchCell: UITableViewCell {
         languageLabel.textColor = .darkGray
         languageLabel.numberOfLines = 2
         starsCountLabel.textColor = .orange
-        likeDisLikeImageView.image = UIImage(#imageLiteral(resourceName: "like"))
         
         // setup views constraints
         let marginGuide = contentView.layoutMarginsGuide

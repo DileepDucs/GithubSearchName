@@ -77,14 +77,6 @@ extension HomeSearchViewController: UISearchBarDelegate {
         githubSearchItemsWith(name: text)
         searchBar.endEditing(true)
     }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
-    }
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        
-    }
 }
 
 extension HomeSearchViewController: SearchViewModelDelegate {

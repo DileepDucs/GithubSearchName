@@ -32,6 +32,7 @@
 		F042FF19274CCA5500742B39 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF18274CCA5500742B39 /* Utility.swift */; };
 		F042FF1C274CCC3F00742B39 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F042FF1B274CCC3F00742B39 /* Podfile */; };
 		F042FF1E274CCDE000742B39 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF1D274CCDDF00742B39 /* ActivityIndicator.swift */; };
+		F042FF20274D964000742B39 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F042FF1F274D964000742B39 /* RealmManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		F042FF18274CCA5500742B39 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		F042FF1B274CCC3F00742B39 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		F042FF1D274CCDDF00742B39 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		F042FF1F274D964000742B39 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 		F042FF17274CCA2C00742B39 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F042FF1F274D964000742B39 /* RealmManager.swift */,
 				F042FF1D274CCDDF00742B39 /* ActivityIndicator.swift */,
 				F042FEDA274CC7A600742B39 /* SceneDelegate.swift */,
 				F042FED8274CC7A600742B39 /* AppDelegate.swift */,
@@ -360,6 +363,7 @@
 				F042FEF8274CC8B900742B39 /* APIClient.swift in Sources */,
 				F042FF0F274CC91500742B39 /* HomeSearchViewController.swift in Sources */,
 				F042FF0B274CC91500742B39 /* SearchViewModel.swift in Sources */,
+				F042FF20274D964000742B39 /* RealmManager.swift in Sources */,
 				F042FEFA274CC8B900742B39 /* APIClientProtocol.swift in Sources */,
 				F042FEFB274CC8B900742B39 /* NetworkManagerProtocol.swift in Sources */,
 				F042FEFD274CC8B900742B39 /* NetworkConstant.swift in Sources */,

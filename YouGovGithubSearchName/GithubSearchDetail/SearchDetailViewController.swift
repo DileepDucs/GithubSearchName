@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Realm
+import RealmSwift
 
 class SearchDetailViewController: UIViewController {
     private let baseView = SearchView()
@@ -64,10 +66,12 @@ class SearchDetailViewController: UIViewController {
 
 extension SearchDetailViewController: SearchViewDelegate {
     func didTapLikeButton() {
+        RealmManager.shared.write(searchItem: searchItem, string: "like")
         navigationController?.popViewController(animated: true)
     }
     
     func didTapDislikeButton() {
+        RealmManager.shared.write(searchItem: searchItem, string: "dislike")
         navigationController?.popViewController(animated: true)
     }
 }

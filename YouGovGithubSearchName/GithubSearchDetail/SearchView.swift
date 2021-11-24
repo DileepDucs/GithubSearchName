@@ -83,7 +83,7 @@ class SearchView: UIView {
         starsCountLabel.textColor = .orange
         
         likeButton.setImage(#imageLiteral(resourceName: "like"), for: .normal)
-        dislikeButton.setImage(#imageLiteral(resourceName: "dontlike"), for: .normal)
+        dislikeButton.setImage(#imageLiteral(resourceName: "dislike"), for: .normal)
         buttons.addArrangedSubview(likeButton)
         buttons.addArrangedSubview(dislikeButton)
         buttons.axis = .horizontal

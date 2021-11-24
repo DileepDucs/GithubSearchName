@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Realm
+import RealmSwift
 
 protocol SearchViewModelDelegate {
     func githubSearchSuccessfully()
