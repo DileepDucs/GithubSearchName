@@ -9,16 +9,20 @@ import Foundation
 import Realm
 import RealmSwift
 
+// MARK: - SearchViewModelDelegate protocol
 protocol SearchViewModelDelegate {
     func githubSearchSuccessfully()
     func githubSearchFailure()
 }
 
 class SearchViewModel {
+    
+    // MARK: - Properties
     var delegate: SearchViewModelDelegate?
     var apiClient = APIClient()
     var searchItems = [SearchItem]()
     
+    // This function will fetch list of items on the search of name
     func fetchSearchList(name: String) {
         let apiData = GithubSearchRequest.searchByName(name)
         apiClient.fetch(request: apiData, basePath: NetworkConstant.Search.url, success: { (data, result) in
@@ -28,6 +32,7 @@ class SearchViewModel {
         }
     }
     
+    // This func parse jsn response from the server and store items in variables.
     func parse(dataResponse: Data) {
         do {
             //here dataResponse received from a network request
@@ -44,10 +49,13 @@ class SearchViewModel {
         }
     }
     
+    
+    // This function retun the search items count
     func searchListCount() -> Int {
         return searchItems.count
     }
     
+    // This function retturn search object for the given index.
     func getSearchItemWith(index: Int) -> SearchItem {
         return searchItems[index]
     }

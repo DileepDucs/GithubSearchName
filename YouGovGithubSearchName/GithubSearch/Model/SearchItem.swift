@@ -9,6 +9,8 @@ import Realm
 import RealmSwift
 
 class SearchItem: Object, Decodable {
+    
+    // MARK: - Properties
     @objc dynamic var id: Int = 0
     @objc dynamic var name: String? = nil
     @objc dynamic var stargazers_count: Int = 0

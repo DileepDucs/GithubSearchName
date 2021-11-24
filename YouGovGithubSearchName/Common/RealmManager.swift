@@ -12,6 +12,7 @@ let realmObject = try! Realm()
 
 class RealmManager: NSObject {
     
+    // Mark:- Singleton Instance
     static let shared = RealmManager()  
     
     func retrieveAllDataForObject(_ T : Object.Type) -> [Object] {
@@ -23,6 +24,7 @@ class RealmManager: NSObject {
         return objects
     }
     
+    /// This function store the items in database
     func write(searchItem: SearchItem?, string: String) {
         if let item = searchItem {
             let realm = try! Realm()
@@ -33,6 +35,9 @@ class RealmManager: NSObject {
         }
     }
     
+    /// This function return the search object from the database
+    /// - parameter id: requested id in database
+    /// - returns: search object if it is in database else nil
     func getSavedItemFromLocal(id: Int) -> SearchItem? {
         return getItems(with: SearchItem.self, id: id, ascending: true, filter: .id)
     }

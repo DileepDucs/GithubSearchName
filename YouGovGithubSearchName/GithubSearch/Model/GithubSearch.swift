@@ -10,6 +10,8 @@ import RealmSwift
 
 
 class GithubSearch: Object, Decodable {
+    
+    // MARK: - Properties
     @objc dynamic var total_count: Int = 0
     @objc dynamic var incomplete_results: Bool = false
     var items: [SearchItem]? = nil

@@ -9,6 +9,7 @@ import UIKit
 
 class HomeSearchViewController: UITableViewController {
     
+    // MARK: - Properties
     let viewModel = SearchViewModel()
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar(frame: CGRect(x: 0, y: 10, width: Utility.screenWidth - 30, height: 40))
@@ -17,6 +18,7 @@ class HomeSearchViewController: UITableViewController {
         return searchBar
     }()
     
+    // MARK: - Life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
@@ -35,6 +37,7 @@ class HomeSearchViewController: UITableViewController {
         navigationItem.leftBarButtonItem = navigationBar
     }
     
+    // This function call api with the search name
     func githubSearchItemsWith(name: String) {
         DispatchQueue.main.async {
             ActivityIndicator.start()
@@ -42,7 +45,7 @@ class HomeSearchViewController: UITableViewController {
         viewModel.fetchSearchList(name: name)
     }
     
-    // #pragma mark - Table view data source
+    // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -63,6 +66,8 @@ class HomeSearchViewController: UITableViewController {
         pushSearchDetailsViewController(searchItem: search)
     }
     
+    
+    /// This function navigate to the search detail screen.
     func pushSearchDetailsViewController(searchItem: SearchItem) {
         let detailViewController = SearchDetailViewController()
         detailViewController.searchItem = searchItem
@@ -71,7 +76,10 @@ class HomeSearchViewController: UITableViewController {
 
 }
 
+// MARK: - UISearchBarDelegate for search action
 extension HomeSearchViewController: UISearchBarDelegate {
+    
+    // This function get called on search button clicked in keyboards and call API to fetch the results.
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text else { return }
         githubSearchItemsWith(name: text)
@@ -79,7 +87,11 @@ extension HomeSearchViewController: UISearchBarDelegate {
     }
 }
 
+
+// MARK: - SearchViewModelDelegate for success and failure response
 extension HomeSearchViewController: SearchViewModelDelegate {
+    
+    /// This function get called on success respone, stop the ActivityIndicator and reaload tableView
     func githubSearchSuccessfully() {
         DispatchQueue.main.async {
             ActivityIndicator.stop()
@@ -87,6 +99,7 @@ extension HomeSearchViewController: SearchViewModelDelegate {
         }
     }
     
+    /// This function get called on failure respone, stop the ActivityIndicator and reaload tableView
     func githubSearchFailure() {
         DispatchQueue.main.async {
             ActivityIndicator.stop()

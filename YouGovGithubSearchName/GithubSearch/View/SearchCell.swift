@@ -10,6 +10,7 @@ import UIKit
 
 class SearchCell: UITableViewCell {
     
+    // MARK: - Properties
     fileprivate let avatarImageView = UIImageView()
     fileprivate let nameLabel = UILabel()
     fileprivate let languageLabel = UILabel()

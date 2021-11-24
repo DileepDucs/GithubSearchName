@@ -10,9 +10,12 @@ import Realm
 import RealmSwift
 
 class SearchDetailViewController: UIViewController {
+    
+    // MARK: - Properties
     private let baseView = SearchView()
     var searchItem: SearchItem?
     
+    // MARK: - Life cycle methods
     override func loadView() {
         view = baseView
         setupUI()
@@ -26,7 +29,7 @@ class SearchDetailViewController: UIViewController {
         baseView.delegate = self
     }
 
-    
+    /// Initial UI setup
     func setupUI() {
         view.addSubview(backButton)
         view.addSubview(headerLabel)
@@ -58,18 +61,24 @@ class SearchDetailViewController: UIViewController {
         return button
     }()
     
+    
+    // MARK: - Button Action
     @objc func backButtonPressed() {
         navigationController?.popViewController(animated: true)
     }
     
 }
 
+// MARK: - SearchViewDelegate for like and dislike buton action
 extension SearchDetailViewController: SearchViewDelegate {
+    
+    /// This function store like info in Realm and navigate to the previous screen
     func didTapLikeButton() {
         RealmManager.shared.write(searchItem: searchItem, string: "like")
         navigationController?.popViewController(animated: true)
     }
     
+    /// This function store ldisike info in Realm and navigate to the previous screen
     func didTapDislikeButton() {
         RealmManager.shared.write(searchItem: searchItem, string: "dislike")
         navigationController?.popViewController(animated: true)

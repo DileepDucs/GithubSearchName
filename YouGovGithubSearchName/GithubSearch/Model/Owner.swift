@@ -9,6 +9,8 @@ import Realm
 import RealmSwift
 
 class Owner: Object, Decodable {
+    
+    // MARK: - Properties
     @objc dynamic var id: Int = 0
     @objc dynamic var login: String? = nil
     @objc dynamic var avatar_url: String? = nil

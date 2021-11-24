@@ -9,6 +9,7 @@ import UIKit
 import Foundation
 import SDWebImage
 
+// MARK:- SearchViewDelegate protocol
 protocol SearchViewDelegate {
     func didTapLikeButton()
     func didTapDislikeButton()
@@ -16,6 +17,8 @@ protocol SearchViewDelegate {
 
 
 class SearchView: UIView {
+    
+    // MARK: - Properties
     fileprivate let avatarImageView = UIImageView()
     private let nameLabel = UILabel()
     private let languageLabel = UILabel()
@@ -47,6 +50,7 @@ class SearchView: UIView {
         }
     }
     
+    /// setup UI
     func setupViews() {
         avatarImageView.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -138,6 +142,7 @@ class SearchView: UIView {
         ])
     }
     
+    // MARK:- Button Action
     @objc func didTapLikeButton() {
         delegate?.didTapLikeButton()
     }
