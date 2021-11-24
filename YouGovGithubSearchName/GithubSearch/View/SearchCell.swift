@@ -59,10 +59,11 @@ class SearchCell: UITableViewCell {
         // setup views properties
         avatarImageView.contentMode = .scaleAspectFit
         nameLabel.font = .boldSystemFont(ofSize: 17.0)
-        nameLabel.numberOfLines = 2
+        nameLabel.numberOfLines = 0
+        nameLabel.preferredMaxLayoutWidth = Utility.screenWidth - 90
         nameLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         languageLabel.textColor = .darkGray
-        languageLabel.numberOfLines = 2
+        languageLabel.numberOfLines = 1
         starsCountLabel.textColor = .orange
         
         // setup views constraints

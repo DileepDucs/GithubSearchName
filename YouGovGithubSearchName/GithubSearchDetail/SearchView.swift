@@ -77,7 +77,8 @@ class SearchView: UIView {
         // setup views properties
         avatarImageView.contentMode = .scaleAspectFit
         nameLabel.font = .boldSystemFont(ofSize: 17.0)
-        nameLabel.numberOfLines = 2
+        nameLabel.numberOfLines = 0
+        nameLabel.preferredMaxLayoutWidth = Utility.screenWidth - 20
         nameLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         nameLabel.textColor = .white
         

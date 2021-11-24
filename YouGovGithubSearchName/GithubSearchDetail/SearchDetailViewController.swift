@@ -47,7 +47,7 @@ class SearchDetailViewController: UIViewController {
     
     let headerLabel: UILabel = {
         let label = UILabel()
-        label.text = "SEARCH ITEM"
+        label.text = "REPO"
         label.font = UIFont(name: "HelveticaNeue-Bold", size: 20.0)
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
